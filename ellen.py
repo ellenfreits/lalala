@@ -1,19 +1,19 @@
-import random
+peso = float(input("Digite seu peso em kg: "))
+altura = float(input("Coloque sua altura: "))
+imc = peso / (altura ** 2)
+print(f"Seu IMC é: {imc:.2f}")
+if imc < 18.5:
+    print("Abaixo do peso")
+elif 18.5 <= imc <= 24.9: 
+   print("Peso normal")
+elif 25 <= imc <= 29.9:
+    print("Sobrepeso")
+else:
+    print("Obesidade")
 
-print("🎲 Bem-vindo ao jogo da adivinhação! 🎲")
-
-# Número secreto entre 1 e 100
-numero_secreto = random.randint(1, 100)
-tentativas = 0
-
-while True:
-    chute = int(input("Digite um número entre 1 e 100: "))
-    tentativas += 1
-
-    if chute == numero_secreto:
-        print(f"🎉 Parabéns! Você acertou o número {numero_secreto} em {tentativas} tentativas!")
-        break
-    elif chute < numero_secreto:
-        print("🔼 O número secreto é maior!")
+N = int(input("Digite um número inteiro: "))
+for i in range(1, N+1):
+    if i % 2 == 0:
+        print(f"{i} - par")
     else:
-        print("🔽 O número secreto é menor!")
+        print(f"{i} - ímpar")
